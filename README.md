@@ -25,7 +25,7 @@ You can:
 
 ## What if I like typing more?
 
-NPM and Angular make it really easy to this see in action on your own machine. You'll just need [node](https://nodejs.org/en/) installed first.
+Node and Angular make it really easy to see this in action on your own machine. You'll just need [node](https://nodejs.org/en/) installed first.
 
 1. `git clone https://github.com/ElliottMoos/emailclient.git`
 2. `cd emailclient`
