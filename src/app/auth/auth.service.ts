@@ -37,6 +37,8 @@ interface SignedinResponse {
 export class AuthService {
   rootUrl = 'https://api.angular-email.com';
   signedin$ = new BehaviorSubject(null);
+  username = '';
+
   constructor(private client: HttpClient) {}
 
   usernameAvailable(username: string) {
@@ -53,8 +55,9 @@ export class AuthService {
       .post<SignupResponse>(`${this.rootUrl}/auth/signup`, credentials)
       .pipe(
         // If tap() is available, assume signup success
-        tap(() => {
+        tap(({ username }) => {
           this.signedin$.next(true);
+          this.username = username;
         })
       );
   }
@@ -63,8 +66,9 @@ export class AuthService {
     return this.client
       .get<SignedinResponse>(`${this.rootUrl}/auth/signedin`)
       .pipe(
-        tap(({ authenticated }) => {
+        tap(({ authenticated, username }) => {
           this.signedin$.next(authenticated);
+          this.username = username;
         })
       );
   }
@@ -82,8 +86,9 @@ export class AuthService {
       .post<SigninResponse>(`${this.rootUrl}/auth/signin`, credentials)
       .pipe(
         // Again, if tap() is available, assume signin success
-        tap(() => {
+        tap(({ username }) => {
           this.signedin$.next(true);
+          this.username = username;
         })
       );
   }

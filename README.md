@@ -8,7 +8,7 @@ There are a lot of Angular tools and some unnecessarily interesting syntax in he
 
 One of my all time favorite teachers, [Stephen Grider](https://twitter.com/ste_grider?lang=en), put together an overview of Angular with a much larger scope than this application. However, I thought it would be nice to document my re-discovery process with this final boss of a thing.
 
-The user management and authentication [server](https://api.angular-email.com/) was built by Stephen, as the primary focus for this application is Angular.
+The user management, authentication, and email [server](https://api.angular-email.com/) was built by Stephen, as the primary focus for this application is Angular.
 
 ## What is this? How do I see it?
 
@@ -16,12 +16,15 @@ A super barebones email client, and you can visit the [app](https://heuristic-ko
 
 You can:
 
+> Note: There is currently a bug in the email server where by the response object will not include an `html` field if you do not
+> send test emails to your `angular-email.com` account using the Gmail web client.
+
 - Sign up (Implemented)
 - Sign in (Implemented)
 - Sign out (Implemented)
-- Check your inbox (In progress)
+- Check your inbox (Implemented)
 - Reply to a (real) email (Not yet)
-- Compose a (real) email (Not yet)
+- Compose a (real) email (Implemented)
 
 ## What if I like typing more?
 
