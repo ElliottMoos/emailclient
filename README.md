@@ -12,8 +12,9 @@ A super barebones email client, and you can visit the [app](https://heuristic-ko
 
 You can:
 
-> Note: There is currently a bug in the email server where by the response object will not include an `html` field if you do not
-> send test emails to your `angular-email.com` account using the Gmail web client.
+> Note: There is currently a bug in the email server that will prevent a necessary `html` field from being included in the
+> response object of the \[GET] https://api.angular-email.com/emails/:id endpoint if you don't use the Gmail web client to send
+> test emails to your new `angular-email.com` account
 
 - Sign up
 - Sign in
