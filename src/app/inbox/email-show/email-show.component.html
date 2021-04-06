@@ -1,1 +1,22 @@
-<p>email-show works!</p>
+<div class="header">
+  <div>
+    <h3>{{email.subject}}</h3>
+    <div>
+      From: <i>{{ email.from }}</i>
+    </div>
+    <div>
+      To: <i>{{ email.to }}</i>
+    </div>
+  </div>
+  <app-email-reply [email]="email" ></app-email-reply>
+</div>
+<div class="divider"></div>
+<!-- 
+  Made use of some optional chaining here,
+  as there is currently a bug in the api.
+
+  If you do not use Gmail's web client to send
+  your angular-email account an email, an `html` field won't be returned with the
+  response object. 
+-->
+<div [innerHTML]="email?.html"></div>
