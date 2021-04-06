@@ -23,6 +23,12 @@ You can:
 - Reply to a real email
 - Compose and send a real email
 
+It can render HTML in email bodies
+![Inbox Screenshot](src/assets/inbox.png?raw=true "Inbox")
+
+The email thread is formatted
+![Reply Screenshot](src/assets/reply.png?raw=true "Reply")
+
 ## What if I like typing more?
 
 Node and Angular make it really easy to see this in action on your own machine. You'll just need [node](https://nodejs.org/en/) installed first.
